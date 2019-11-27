@@ -1,21 +1,21 @@
 package pro.zoltanfekete.springpetclinic.bootstrap;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import pro.zoltanfekete.springpetclinic.model.Owner;
 import pro.zoltanfekete.springpetclinic.model.Vet;
 import pro.zoltanfekete.springpetclinic.services.OwnerService;
 import pro.zoltanfekete.springpetclinic.services.VetService;
-import pro.zoltanfekete.springpetclinic.services.map.OwnerServiceMap;
-import pro.zoltanfekete.springpetclinic.services.map.VetServiceMap;
 
 public class DataLoader implements CommandLineRunner {
 
     private final OwnerService ownerService;
     private final VetService vetService;
 
-    public DataLoader() {
-        this.ownerService = new OwnerServiceMap();
-        this.vetService = new VetServiceMap();
+    @Autowired
+    public DataLoader(OwnerService ownerService, VetService vetService) {
+        this.ownerService = ownerService;
+        this.vetService = vetService;
     }
 
     @Override
