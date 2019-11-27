@@ -1,11 +1,11 @@
 package pro.zoltanfekete.springpetclinic.services.map;
 
 import pro.zoltanfekete.springpetclinic.model.Pet;
-import pro.zoltanfekete.springpetclinic.services.CrudService;
+import pro.zoltanfekete.springpetclinic.services.PetService;
 
 import java.util.Set;
 
-public class PetServiceMap extends AbstractMapService<Pet, Long> implements CrudService<Pet, Long> {
+public class PetServiceMap extends AbstractMapService<Pet, Long> implements PetService {
 
     @Override
     public Set<Pet> findAll() {
