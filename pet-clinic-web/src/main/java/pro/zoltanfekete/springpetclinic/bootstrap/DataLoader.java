@@ -2,11 +2,13 @@ package pro.zoltanfekete.springpetclinic.bootstrap;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
+import org.springframework.stereotype.Component;
 import pro.zoltanfekete.springpetclinic.model.Owner;
 import pro.zoltanfekete.springpetclinic.model.Vet;
 import pro.zoltanfekete.springpetclinic.services.OwnerService;
 import pro.zoltanfekete.springpetclinic.services.VetService;
 
+@Component
 public class DataLoader implements CommandLineRunner {
 
     private final OwnerService ownerService;
