@@ -19,6 +19,6 @@ public class OwnerController {
     @GetMapping({"/owner","/owner.html"})
     public String ownerList(Model model){
         model.addAttribute("owners",ownerService.findAll());
-        return "owner";
+        return "owners/owner";
     }
 }
