@@ -10,5 +10,5 @@ public class Vet extends Person {
 
     @Getter
     @Setter
-    private Set<Speciality> specialities = new HashSet<>();
+    private Set<Specialty> specialities = new HashSet<>();
 }

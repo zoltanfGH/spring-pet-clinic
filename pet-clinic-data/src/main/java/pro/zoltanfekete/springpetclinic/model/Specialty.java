@@ -3,7 +3,7 @@ package pro.zoltanfekete.springpetclinic.model;
 import lombok.Getter;
 import lombok.Setter;
 
-public class Speciality extends BaseEntity {
+public class Specialty extends BaseEntity {
 
     @Getter
     @Setter
