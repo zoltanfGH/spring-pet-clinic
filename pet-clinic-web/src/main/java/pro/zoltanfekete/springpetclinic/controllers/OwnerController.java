@@ -6,6 +6,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import pro.zoltanfekete.springpetclinic.services.OwnerService;
 
+
 @Controller
 public class OwnerController {
 
@@ -20,5 +21,10 @@ public class OwnerController {
     public String ownerList(Model model){
         model.addAttribute("owners",ownerService.findAll());
         return "owners/owners";
+    }
+
+    @GetMapping({"/owners/find","/owners/find.html"})
+    public String findOwner(Model model){
+        return "notimplemented";
     }
 }
